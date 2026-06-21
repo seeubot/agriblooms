@@ -1,0 +1,75 @@
+.how-section {
+  background: var(--white);
+}
+
+.steps {
+  position: relative;
+  margin-bottom: 48px;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 24px;
+  padding-bottom: 36px;
+  position: relative;
+}
+
+.step:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 31px;
+  top: 64px;
+  bottom: -4px;
+  width: 1.5px;
+  background: var(--sage-light);
+}
+
+.step-marker {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--sage-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.step-marker span {
+  font-family: var(--font-display);
+  color: var(--forest);
+  font-size: 1.1rem;
+}
+
+.step-body h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.step-body p {
+  color: var(--ink-soft);
+  max-width: 560px;
+}
+
+.how-cta {
+  margin-left: 88px;
+}
+
+@media (max-width: 600px) {
+  .step {
+    grid-template-columns: 48px 1fr;
+    gap: 16px;
+  }
+  .step-marker {
+    width: 48px;
+    height: 48px;
+  }
+  .step:not(:last-child)::before {
+    left: 23px;
+    top: 48px;
+  }
+  .how-cta {
+    margin-left: 0;
+  }
+}
